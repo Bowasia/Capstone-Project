@@ -1,4 +1,4 @@
-#include <LoRa.h> //ESP8266
+#include <LoRa.h> //ESP32
 #include <SPI.h>
  
 #define ss 5
@@ -18,7 +18,7 @@ void setup()
     Serial.println(".");
     delay(500);
   }
-  LoRa.setSyncWord(0xA5);
+  LoRa.setSyncWord(0x63); //63
   Serial.println("LoRa Initializing OK!");
 }
  

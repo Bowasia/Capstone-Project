@@ -1,9 +1,9 @@
-#include <LoRa.h> //ESP32
+#include <LoRa.h> //ESP8266
 #include <SPI.h>
  
-#define ss 15
+#define ss 15 //slave pin
 #define rst 16
-#define dio0 2
+#define dio0 2 // interup callbacks
  
 int counter = 0;
  
@@ -20,21 +20,41 @@ void setup()
     Serial.println(".");
     delay(500);
   }
-  LoRa.setSyncWord(0xA5);
+  LoRa.setSyncWord(0x63);
   Serial.println("LoRa Initializing OK!");
 }
- 
-void loop() 
+
+void loop()
 {
-  Serial.print("Sending packet: ");
-  Serial.println(counter);
- 
-  LoRa.beginPacket();   //Send LoRa packet to receiver
-  LoRa.print("hello ");
-  LoRa.print(counter);
-  LoRa.endPacket();
- 
-  counter++;
- 
-  delay(10000);
+  Serial.println("Feed the fish ? (y/n)");
+  while (Serial.available() == 0)
+  {  
+  }
+
+  String input = Serial.readString();
+
+  if (input == 'y'){
+    Serial.println("Feeding . . .");
+    LoRa.beginPacket();
+    LoRa.print("Feed");
+    LoRa.endPacket();
+  }
+  else
+  Serial.println("Not Feeding");
+  
 }
+// Original void loop
+//void loop() 
+//{
+//  Serial.print("Sending packet: ");
+//  Serial.println(counter);
+// 
+//  LoRa.beginPacket();   //Send LoRa packet to receiver
+//  LoRa.print("hello ");
+//  LoRa.print(counter);
+//  LoRa.endPacket();
+// 
+//  counter++;
+// 
+//  delay(10000);
+//}
