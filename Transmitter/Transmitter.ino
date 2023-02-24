@@ -1,4 +1,4 @@
-#include <LoRa.h>
+#include <LoRa.h> //ESP32
 #include <SPI.h>
  
 #define ss 15
