@@ -2,8 +2,8 @@
 #include <SPI.h>
  
 #define ss 5
-#define rst 34
-#define dio0 35
+#define rst 35
+#define dio0 34
  
 void setup() 
 {

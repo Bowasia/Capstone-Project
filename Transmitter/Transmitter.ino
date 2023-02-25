@@ -1,10 +1,15 @@
 #include <LoRa.h> //ESP8266
 #include <SPI.h>
  
-#define ss 15 //slave pin
-#define rst 16
-#define dio0 2 // interup callbacks
- 
+//#define ss 15 //slave pin
+//#define rst 16
+//#define dio0 2 // interup callbacks
+
+#define ss 5
+#define rst 35
+#define dio0 34
+
+
 int counter = 0;
  
 void setup() 
@@ -23,38 +28,38 @@ void setup()
   LoRa.setSyncWord(0x63);
   Serial.println("LoRa Initializing OK!");
 }
-
-void loop()
-{
-  Serial.println("Feed the fish ? (y/n)");
-  while (Serial.available() == 0)
-  {  
-  }
-
-  String input = Serial.readString();
-
-  if (input == 'y'){
-    Serial.println("Feeding . . .");
-    LoRa.beginPacket();
-    LoRa.print("Feed");
-    LoRa.endPacket();
-  }
-  else
-  Serial.println("Not Feeding");
-  
-}
-// Original void loop
-//void loop() 
+//
+//void loop()
 //{
-//  Serial.print("Sending packet: ");
-//  Serial.println(counter);
-// 
-//  LoRa.beginPacket();   //Send LoRa packet to receiver
-//  LoRa.print("hello ");
-//  LoRa.print(counter);
-//  LoRa.endPacket();
-// 
-//  counter++;
-// 
-//  delay(10000);
+//  Serial.println("Feed the fish ? (y/n)");
+//  while (Serial.available() == 0)
+//  {  
+//  }
+//
+//  String input = Serial.readString();
+//
+//  if (input == 'y'){
+//    Serial.println("Feeding . . .");
+//    LoRa.beginPacket();
+//    LoRa.print("Feed");
+//    LoRa.endPacket();
+//  }
+//  else
+//  Serial.println("Not Feeding");
+//  
 //}
+// Original void loop
+void loop() 
+{
+  Serial.print("Sending packet: ");
+  Serial.println(counter);
+ 
+  LoRa.beginPacket();   //Send LoRa packet to receiver
+  LoRa.print("hello ");
+  LoRa.print(counter);
+  LoRa.endPacket();
+ 
+  counter++;
+ 
+  delay(10000);
+}
