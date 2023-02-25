@@ -2,6 +2,7 @@
 
 #include "define_io.h"
 
+// time count
 unsigned long tTime[3] = {0,0};
 int sec = 1000;
 // Set the PWM duty cycle (out of 255)
