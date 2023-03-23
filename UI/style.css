@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');:root {
-  --IBM_TH: 'IBM Plex Sans Thai', sans-serif;
-  --IBM_ENG: 'IBM Plex Sans', sans-serif;
-  --orange: #F16322;
-  --black: #212529;
-  --white: #f8f9fa;
+    --IBM_TH: 'IBM Plex Sans Thai', sans-serif;
+    --IBM_ENG: 'IBM Plex Sans', sans-serif;
+    --orange: #F16322;
+    --light-orange: #f5ad8b;
+    --black: #212529;
+    --white: #f8f9fa;
 }
 
 body{
@@ -13,12 +14,21 @@ body{
     margin: 0%;
 }
 
+.orange{
+    color: #F16322;
+}
+
+.black{
+    color: #212529;
+}
 
 .nav-container{
     display: flex; 
     flex-direction: row;
+    justify-content: space-between;
     background-color: var(--white);
     height: 12vh;
+    
 }
 
 .logo{
@@ -42,10 +52,86 @@ body{
     align-self: center;
 }
 
-.orange{
-    color: #F16322;
+.proj-name{
+    text-align: right;
+    margin-right: 16px;
 }
 
-.black{
-    color: #212529;
+.dash-container{
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    height: 300px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px #f0f0f0;
+    background-color: var(--white);
+    /* background-color: rgb(250, 223, 200); */
+}
+
+.topic{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+.topic-icon{
+    width: 50px;
+    height: auto;
+}
+
+.topic-txt{
+    display: inline-block;
+    font-family: var(--IBM_ENG);
+    font-size: 1.5rem;
+    color: var(--orange);
+}
+
+.range{
+    display: flex;
+    gap: 32px;
+    /* background-color: #4b4949; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+#range-display{
+    font-family: var(--IBM_ENG);
+    font-size: 2.5rem;
+}
+
+.range-control{
+    -webkit-appearance: none;
+    width: 300px;
+    height: 10px;
+    background-color: var(--light-orange);
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+
+.range-control::-webkit-slider-thumb{
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background-color: var(--orange);
+    border-radius: 50%;
+}
+
+.range-control::-webkit-slider-thumb:hover{
+    background-color: #d45920;
 }

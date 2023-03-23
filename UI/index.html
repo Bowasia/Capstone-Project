@@ -12,20 +12,98 @@
     <nav class="nav-container">
 
         <div class="nav-item">
-            <a href="#" class="nav-link">
-                <img class="logo" src="/UI/assets/KMITL-logo.png"  alt="">
-                <div>
+            <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiZgfHLqPH9AhX_cGwGHcxoBcIQFnoECBcQAQ&url=https%3A%2F%2Fwww.kmitl.ac.th%2F&usg=AOvVaw1q1tWXHnvFpbL7C1qWm40Y" class="nav-link">
+                <img class="nav-item logo" src="/UI/assets/KMITL-logo.png"  alt="">
+                <div class="nav-item">
                     <div class="logo-txt orange">สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</div>
                     <div class="logo-txt black">King Mongkut's Institute of Technology Ladkrabang</div>
                 </div>
-
             </a>
         </div>
 
-
-
+        <div class="nav-item">
+            <div class="proj-name">
+                <div>ระบบให้อาหารปลาอัจฉริยะ</div>
+                <div>Smart feeding system DEMO version </div>
+            </div>
+        </div>
 
     </nav>
-    
+
+    <div class="dash-container">
+
+        <div class="box" id="range-card">
+
+
+            <div class="topic">
+                <span class="topic-icon">
+                    <img src="assets/radius.png" alt="" width="48px" height="auto">
+                </span>
+                <div class="topic-txt">Range control</div>
+            </div>
+
+            <div class="range">
+
+                <div class="range-item range-value-container">
+                    <span id="range-display">0</span>
+                    <span>%</span>
+                </div>
+                
+                <div class="range-item range-slider-container">
+                    <input class="range-control" id="range-value" type="range" min="0" max="100" value="70">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="box" id="food-card">
+
+
+            <div class="topic">
+                <span class="topic-icon">
+                    <img src="assets/fish-food.png" alt="" width="48px" height="auto">
+                </span>
+                <div class="topic-txt">Food remain</div>
+            </div>
+
+            <div class="range">
+
+                <div class="range-item range-value-container">
+                    <span id="range-display">0</span>
+                    <span>%</span>
+                </div>
+                
+                <div class="range-item range-slider-container">
+                    <input class="range-control" id="range-value" type="range" min="0" max="100" value="70">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="box" id="time-card">
+
+
+            <div class="topic">
+                <span class="topic-icon">
+                    <img src="assets/time.png" alt="" width="48px" height="auto">
+                </span>
+                <div class="topic-txt">Schedule</div>
+            </div>
+
+            <div class="range">
+
+                <div class="range-item range-value-container">
+                    <span id="range-display">0</span>
+                    <span>%</span>
+                </div>
+                
+                <div class="range-item range-slider-container">
+                    <input class="range-control" id="range-value" type="range" min="0" max="100" value="70">
+                </div>
+            </div>
+
+        </div>
+    </div>
 </body>
-</html>
+<script type="text/javascript" src="script.js"></script>
+</html> 
