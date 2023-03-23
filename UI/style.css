@@ -22,6 +22,8 @@ body{
     color: #212529;
 }
 
+/* NAVIGATION BAR */
+
 .nav-container{
     display: flex; 
     flex-direction: row;
@@ -56,6 +58,8 @@ body{
     text-align: right;
     margin-right: 16px;
 }
+
+/* DASHBOARD PART */
 
 .dash-container{
     display: flex;
@@ -98,6 +102,8 @@ body{
     color: var(--orange);
 }
 
+/* RANGE CARD */
+
 .range{
     display: flex;
     gap: 32px;
@@ -135,3 +141,72 @@ body{
 .range-control::-webkit-slider-thumb:hover{
     background-color: #d45920;
 }
+
+
+/* FOOD CARD */
+
+
+/* SCHEDULE CARD */
+
+#time-card{
+    transition: 0.5s;
+}
+.time-card-on{
+    background-color:#f89669;
+    transition: 0.5s;
+}
+
+.schedule{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    flex-grow: 1;
+
+}
+
+input[type="time"]{
+    font-family: var(--IBM_ENG);
+    font-size: 2.5rem;
+    font-weight: 600;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    padding: 0;background-color: transparent;
+}
+
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    position: relative;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: var(--light-orange);
+    transition: background .3s;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="checkbox"]::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    top: 50%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    transition: left .3s;
+}
+
+input[type="checkbox"]:checked{
+    background-color: var(--orange);
+}
+
+input[type="checkbox"]:checked::after{
+    left: 82%;
+}
+
+

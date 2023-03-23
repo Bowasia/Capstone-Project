@@ -32,6 +32,8 @@
 
     <div class="dash-container">
 
+        <!-- RANGE CONTROL CARD -->
+
         <div class="box" id="range-card">
 
 
@@ -44,7 +46,7 @@
 
             <div class="range">
 
-                <div class="range-item range-value-container">
+                <div class="range-item range-display-container">
                     <span id="range-display">0</span>
                     <span>%</span>
                 </div>
@@ -55,6 +57,8 @@
             </div>
 
         </div>
+       
+        <!-- FOOD CARD -->
 
         <div class="box" id="food-card">
 
@@ -80,25 +84,30 @@
 
         </div>
 
+        <!-- SCHEDULE CARD -->
+
         <div class="box" id="time-card">
 
+            <!-- TOPIC -->
 
             <div class="topic">
                 <span class="topic-icon">
                     <img src="assets/time.png" alt="" width="48px" height="auto">
                 </span>
-                <div class="topic-txt">Schedule</div>
+                <div class="topic-txt" id="topic-schedule">Schedule</div>
             </div>
 
-            <div class="range">
+            <!-- CONTENT -->
 
-                <div class="range-item range-value-container">
-                    <span id="range-display">0</span>
-                    <span>%</span>
+            <div class="schedule">
+
+                <div class="schedule-item schedule-value-container">
+                    <input class="schedule-input" type="time">
                 </div>
                 
-                <div class="range-item range-slider-container">
-                    <input class="range-control" id="range-value" type="range" min="0" max="100" value="70">
+                <div class="schedule-item schedule-slider-container">
+                    <input class="schedule-toggle" id="schedule-toggle" type="checkbox" onchange="showtime()" value="off">
+                    <span class="toggle_btn"></span>
                 </div>
             </div>
 
