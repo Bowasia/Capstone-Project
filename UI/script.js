@@ -2,10 +2,18 @@
 // Range control
 var range_display = document.getElementById("range-display");
 var  range_input = document.getElementById("range-value");
+var range2_display = document.getElementById("range2-display");
+var  range2_input = document.getElementById("range2-value");
+
 range_display.innerHTML = range_input.value;
+range2_display.innerHTML = range2_input.value;
 
 range_input.oninput = function(){
     range_display.innerHTML = this.value;
+}
+
+range2_input.oninput = function(){
+    range2_display.innerHTML = this.value;
 }
 
 // Time schedule

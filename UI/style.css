@@ -72,7 +72,7 @@ body{
 .box{
     display: flex;
     flex-direction: column;
-    width: 550px;
+    width: 30vw;
     height: 300px;
     border: 1px solid transparent;
     border-radius: 8px;
@@ -114,7 +114,7 @@ body{
     flex-grow: 1;
 }
 
-#range-display{
+.range-display{
     font-family: var(--IBM_ENG);
     font-size: 2.5rem;
 }
@@ -122,9 +122,9 @@ body{
 .range-control{
     -webkit-appearance: none;
     width: 300px;
-    height: 10px;
+    height: 11px;
     background-color: var(--light-orange);
-    border: 1px solid transparent;
+    /* border: 1px solid transparent; */
     border-radius: 8px;
 }
 
@@ -136,10 +136,13 @@ body{
     height: 25px;
     background-color: var(--orange);
     border-radius: 50%;
+    outline: 0px solid rgba(209, 208, 208, 0.497);
 }
 
 .range-control::-webkit-slider-thumb:hover{
     background-color: #d45920;
+    outline: 12px solid rgba(209, 208, 208, 0.497);
+    transition: 0.3s;
 }
 
 
